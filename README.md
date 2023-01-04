@@ -14,3 +14,12 @@ ___
 Analyzing supermarket sales data using formulas in Microsoft Excel.
 
 [Read More ---](https://github.com/agungbudiwirawan/Data_Analysis_using_Excel_Formulas)
+
+___
+## Sales Analysis using Pivot Table
+Analyze supermarket sales using pivot chart and table in Microsoft Excel.
+
+[Read More ---](https://github.com/agungbudiwirawan/Data_Analysis_using_Pivot_Table)
+
+___
+## 
