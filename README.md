@@ -1,25 +1,33 @@
-
 # PORTFOLIO
 ### AGUNG BUDI WIRAWAN 
 I'm skilled on Microsoft Excel/Spreadsheet, SQL, Python, Microsoft Power BI
 
+Contact Me: 
+- Email: agungbudiwirawan13@gmail.com
+- [Linkedin](https://www.linkedin.com/in/agungbudiwirawan/)
+
 ---
-## Data Science in Telco: Data Cleansing
-The data cleaning was carried out, including overcoming duplication of values, overcoming missing values, overcoming outliers, and standardizing values.
-
-[Read More ---](https://github.com/agungbudiwirawan/Data-Science-in-Telco-Data-Cleansing)
-
-___
+# Excel-Project
 ## Sales Analysis using Excel Formulas
 Analyzing supermarket sales data using formulas in Microsoft Excel.
 
 [Read More ---](https://github.com/agungbudiwirawan/Data_Analysis_using_Excel_Formulas)
 
-___
 ## Sales Analysis using Pivot Table
 Analyze supermarket sales using pivot chart and table in Microsoft Excel.
 
 [Read More ---](https://github.com/agungbudiwirawan/Data_Analysis_using_Pivot_Table)
 
 ___
-## 
+# SQL-Project
+## E-commerce Analysis using SQL
+The objective of this project is to provide an analysis of [Olist Store](https://olist.com/pt-br/) (Brazilian E-commerce) sales.
+
+[Read More ---](https://github.com/agungbudiwirawan/e-commerce_analysis_using_sql)
+
+___
+# Python-Project
+## Data Science in Telco: Data Cleansing
+The data cleaning was carried out, including overcoming duplication of values, overcoming missing values, overcoming outliers, and standardizing values.
+
+[Read More ---](https://github.com/agungbudiwirawan/Data-Science-in-Telco-Data-Cleansing)
