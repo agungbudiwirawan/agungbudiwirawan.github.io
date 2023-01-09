@@ -20,11 +20,15 @@ Analyze supermarket sales using pivot chart and table in Microsoft Excel.
 
 ___
 # SQL-Project
-## E-commerce Analysis using SQL
+## E-commerce Analysis using SQL: Olist Store
 The objective of this project is to provide an analysis of [Olist Store](https://olist.com/pt-br/) (Brazilian E-commerce) sales.
 
 [Read More ---](https://github.com/agungbudiwirawan/e-commerce_analysis_using_sql)
 
+## Socioeconomic Analysis using SQL: Chicago Socioeconomic Data
+The objective of this project is to analyze the socio-economic in Chicago.
+
+[Read More ---](https://github.com/agungbudiwirawan/socioeconomic_analysis)
 ___
 # Python-Project
 ## Data Science in Telco: Data Cleansing
