@@ -29,6 +29,7 @@ The objective of this project is to provide an analysis of [Olist Store](https:/
 The objective of this project is to analyze the socio-economic in Chicago.
 
 [Read More ---](https://github.com/agungbudiwirawan/socioeconomic_analysis)
+
 ___
 # Python-Project
 ## Data Science in Telco: Data Cleansing
