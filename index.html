@@ -6,66 +6,125 @@
   <title>Agung Budi Wirawan | Data Analyst</title>
 
   <style>
+    /* RESET & BASE */
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #ffffff;
-      color: #111;
-      max-width: 900px;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: #f9fafb;
+      color: #111827;
+      max-width: 880px;
       margin: 0 auto;
-      padding: 40px 20px;
-      line-height: 1.7;
+      padding: 56px 24px;
+      line-height: 1.75;
     }
 
-    h1, h2, h3 {
-      margin-top: 40px;
-      margin-bottom: 16px;
-    }
-
+    /* TYPOGRAPHY */
     h1 {
-      font-size: 32px;
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 8px;
     }
 
     h2 {
-      font-size: 24px;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 6px;
+      font-size: 26px;
+      font-weight: 600;
+      margin-top: 72px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 8px;
     }
 
     h3 {
       font-size: 20px;
+      font-weight: 600;
+      margin-top: 32px;
+      margin-bottom: 12px;
     }
 
-    ul {
-      margin-left: 20px;
-    }
-
-    li {
-      margin-bottom: 6px;
-    }
-
-    .project {
-      margin-bottom: 48px;
+    p {
+      margin-bottom: 16px;
+      color: #1f2937;
     }
 
     .meta {
-      font-style: italic;
-      color: #444;
+      font-size: 15px;
+      color: #4b5563;
+      margin-bottom: 24px;
     }
 
+    /* HR SKIM */
+    .hr-skim {
+      background-color: #f1f5f9;
+      border-left: 4px solid #2563eb;
+      padding: 20px 24px;
+      margin-bottom: 48px;
+      border-radius: 8px;
+    }
+
+    .hr-skim ul {
+      margin-left: 18px;
+    }
+
+    .hr-skim li {
+      margin-bottom: 6px;
+      font-size: 15px;
+    }
+
+    /* LIST */
+    ul {
+      margin: 12px 0 20px 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    /* LINK */
     a {
-      color: #0a58ca;
+      color: #2563eb;
       text-decoration: none;
+      font-weight: 500;
     }
 
     a:hover {
       text-decoration: underline;
     }
 
+    /* PROJECT CARD */
+    .project {
+      background-color: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-top: 32px;
+    }
+
+    /* FOOTER */
     footer {
-      margin-top: 80px;
-      font-size: 14px;
-      color: #555;
+      margin-top: 96px;
+      padding-top: 24px;
+      border-top: 1px solid #e5e7eb;
       text-align: center;
+      font-size: 14px;
+      color: #6b7280;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      body {
+        padding: 40px 16px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
     }
   </style>
 </head>
@@ -73,16 +132,18 @@
 
   <h1>Agung Budi Wirawan</h1>
   <p class="meta">Data Analyst | Excel · SQL · Python · Power BI</p>
-<div class="hr-skim">
-  <p><strong>Ringkasan Singkat</strong></p>
 
-  <ul>
-    <li>Data Analyst dengan fokus pada analisis data untuk mendukung pengambilan keputusan bisnis.</li>
-    <li>Berpengalaman menggunakan Excel, SQL, Python, dan Power BI untuk data cleaning, EDA, dan reporting.</li>
-    <li>Terbiasa mengolah data penjualan dan transaksi untuk menemukan insight yang relevan.</li>
-    <li>Mampu menyampaikan hasil analisis secara jelas kepada stakeholder non-teknis.</li>
-  </ul>
-</div>
+  <!-- HR SKIM -->
+  <div class="hr-skim">
+    <p><strong>Ringkasan Singkat</strong></p>
+    <ul>
+      <li>Data Analyst dengan fokus pada analisis data untuk mendukung pengambilan keputusan bisnis.</li>
+      <li>Berpengalaman menggunakan Excel, SQL, Python, dan Power BI untuk data cleaning, EDA, dan reporting.</li>
+      <li>Terbiasa menganalisis data penjualan dan transaksi untuk menemukan insight yang relevan.</li>
+      <li>Mampu menyampaikan hasil analisis secara jelas kepada stakeholder non-teknis.</li>
+    </ul>
+  </div>
+
   <h2>Tentang Saya</h2>
   <p>
     Saya adalah seorang <strong>Data Analyst</strong> yang berfokus pada pengolahan,
@@ -112,75 +173,54 @@
 
   <div class="project">
     <h3>Analisis Penjualan Menggunakan Python</h3>
-
     <p><strong>Permasalahan</strong><br>
-    Perusahaan ingin memahami tren penjualan dan mengidentifikasi produk
-    dengan performa terbaik untuk meningkatkan pendapatan.</p>
+    Perusahaan ingin memahami tren penjualan dan mengidentifikasi produk dengan performa terbaik.</p>
 
     <p><strong>Pendekatan</strong></p>
     <ul>
       <li>Membersihkan dan memproses data penjualan menggunakan Python</li>
-      <li>Melakukan exploratory data analysis (EDA) untuk menemukan pola dan tren</li>
-      <li>Menggunakan visualisasi data untuk mendukung interpretasi hasil</li>
+      <li>Melakukan exploratory data analysis (EDA)</li>
+      <li>Menggunakan visualisasi data untuk mendukung insight</li>
     </ul>
 
-    <p><strong>Insight Utama</strong></p>
-    <ul>
-      <li>Terdapat periode dengan peningkatan penjualan signifikan</li>
-      <li>Beberapa produk memberikan kontribusi besar terhadap total pendapatan</li>
-      <li>Diskon memiliki pengaruh terhadap volume penjualan</li>
-    </ul>
-
-    <p><strong>Rekomendasi</strong><br>
-    Fokus pada produk dengan performa tinggi dan optimalkan strategi promosi
-    berdasarkan periode penjualan terbaik.</p>
+    <p><strong>Insight & Rekomendasi</strong><br>
+    Fokus pada produk dengan performa tinggi dan optimalkan strategi promosi.</p>
 
     <p>🔗 <a href="https://github.com/agungbudiwirawan" target="_blank">GitHub Repository</a></p>
   </div>
 
   <div class="project">
     <h3>Analisis Data Bisnis Menggunakan SQL</h3>
-
     <p><strong>Permasalahan</strong><br>
-    Data transaksi tersebar di beberapa tabel sehingga menyulitkan proses
-    analisis dan pengambilan keputusan.</p>
+    Data transaksi tersebar di beberapa tabel sehingga sulit dianalisis.</p>
 
     <p><strong>Pendekatan</strong></p>
     <ul>
-      <li>Menggabungkan data dari berbagai tabel menggunakan SQL</li>
-      <li>Melakukan aggregasi data untuk analisis performa bisnis</li>
-      <li>Menyusun query yang efisien dan mudah dibaca</li>
-    </ul>
-
-    <p><strong>Insight Utama</strong></p>
-    <ul>
-      <li>Pelanggan dengan kontribusi transaksi tertinggi</li>
-      <li>Produk yang paling sering dibeli</li>
-      <li>Pola transaksi berdasarkan waktu</li>
+      <li>Menggabungkan data menggunakan SQL</li>
+      <li>Melakukan aggregasi untuk analisis bisnis</li>
+      <li>Menyusun query yang efisien</li>
     </ul>
 
     <p><strong>Hasil</strong><br>
-    Query SQL yang dibuat membantu mempercepat proses analisis data bisnis.</p>
+    Query membantu mempercepat proses analisis data bisnis.</p>
 
     <p>🔗 <a href="https://github.com/agungbudiwirawan" target="_blank">GitHub Repository</a></p>
   </div>
 
   <div class="project">
     <h3>Dashboard Penjualan Menggunakan Power BI</h3>
-
     <p><strong>Permasalahan</strong><br>
-    Manajemen membutuhkan laporan penjualan yang ringkas dan mudah dipahami.</p>
+    Manajemen membutuhkan laporan penjualan yang mudah dipahami.</p>
 
     <p><strong>Pendekatan</strong></p>
     <ul>
-      <li>Mengolah dan memodelkan data penjualan di Power BI</li>
-      <li>Membangun dashboard interaktif dengan filter dan visual utama</li>
-      <li>Menyajikan metrik penting seperti total penjualan dan tren bulanan</li>
+      <li>Mengolah dan memodelkan data di Power BI</li>
+      <li>Membuat dashboard interaktif</li>
+      <li>Menyajikan metrik penjualan utama</li>
     </ul>
 
     <p><strong>Hasil</strong><br>
-    Dashboard membantu stakeholder memantau performa bisnis dan mengambil
-    keputusan berbasis data.</p>
+    Dashboard membantu monitoring performa bisnis dan pengambilan keputusan.</p>
 
     <p>🔗 <a href="https://github.com/agungbudiwirawan" target="_blank">GitHub Repository</a></p>
   </div>
