@@ -1,140 +1,39 @@
+/* RESET & BASE */
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
 }
 
 body {
-  background: #f9fafb;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #f9fafb;
   color: #111827;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 56px 24px;
+  line-height: 1.75;
 }
 
-/* HERO */
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 80px 10%;
-  gap: 40px;
-}
-
-.hero-text h1 {
-  font-size: 40px;
-}
-
-.hero-text h1 span {
-  color: #2563eb;
-}
-
-.hero-text h2 {
-  margin: 10px 0;
-  font-weight: 600;
-  color: #374151;
-}
-
-.hero-text p {
-  max-width: 500px;
-  line-height: 1.6;
-  margin-bottom: 24px;
-}
-
-.cta {
-  display: flex;
-  gap: 12px;
-}
-
-.btn {
-  padding: 10px 18px;
-  border-radius: 8px;
-  border: 1px solid #2563eb;
-  text-decoration: none;
-  color: #2563eb;
-  font-weight: 600;
-}
-
-.btn.primary {
-  background: #2563eb;
-  color: white;
-}
-
-.hero-img img {
-  width: 220px;
-  border-radius: 50%;
-}
-
-/* SECTIONS */
-section {
-  padding: 80px 10%;
-}
-
-h3 {
-  font-size: 28px;
-  margin-bottom: 32px;
-}
-
-/* SKILLS */
-.skill-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 20px;
-}
-
-.skill-card {
-  background: white;
-  padding: 20px;
-  text-align: center;
-  border-radius: 12px;
-  font-weight: 600;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-/* PROJECTS */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-}
-
-.project-card {
-  background: white;
-  padding: 24px;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-}
-
-.project-card h4 {
+/* TYPOGRAPHY */
+h1 {
+  font-size: 36px;
+  font-weight: 700;
   margin-bottom: 8px;
 }
 
-.project-card p {
-  line-height: 1.5;
+h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-top: 72px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 8px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 32px;
   margin-bottom: 12px;
 }
 
-.project-card span {
-  font-size: 14px;
-  color: #6b7280;
-}
-
-.project-card a {
-  display: inline-block;
-  margin-top: 12px;
-  text-decoration: none;
-  color: #2563eb;
-  font-weight: 600;
-}
-
-/* CONTACT */
-.contact a {
-  color: #2563eb;
-  text-decoration: none;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 24px;
-  font-size: 14px;
-  color: #6b7280;
-}
+p {
