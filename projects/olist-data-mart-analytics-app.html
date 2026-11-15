@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olist E-Commerce Data Mart & Analytics Web App | Agung Budi Wirawan</title>
+  <meta name="description" content="From 9 raw CSV files to a star-schema data mart in BigQuery, served to a Power BI dashboard and a FastAPI + React analytics app.">
+  <meta property="og:title" content="Olist E-Commerce Data Mart & Analytics Web App | Agung Budi Wirawan">
+  <meta property="og:description" content="From 9 raw CSV files to a star-schema data mart in BigQuery, served to a Power BI dashboard and a FastAPI + React analytics app.">
+  <meta property="og:image" content="https://agungbudiwirawan.github.io/assets/img/thumb-olist-data-mart-analytics-app.webp">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header class="nav solid">
+  <div class="container">
+    <a class="brand" href="../index.html"><span class="brand-mark">AB</span><span class="brand-name">Agung Budi Wirawan<small>Data Analyst</small></span></a>
+    <nav aria-label="Main">
+      <ul class="nav-links">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a class="active" href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+        <li class="nav-cv"><a href="../assets/pdf/Agung-Budi-Wirawan-CV.pdf" target="_blank" rel="noopener">Download CV</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary btn-sm" href="../assets/pdf/Agung-Budi-Wirawan-CV.pdf" target="_blank" rel="noopener"><svg class="icon"><use href="../assets/img/icons.svg#download"/></svg> Resume</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" data-open="../assets/img/icons.svg#menu" data-close="../assets/img/icons.svg#close"><svg class="icon"><use href="../assets/img/icons.svg#menu"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="cs-hero">
+  <div class="container">
+    <a class="back" href="../index.html#projects"><svg class="icon"><use href="../assets/img/icons.svg#arrow-left"/></svg> All projects</a>
+    <div class="kicker" style="color:var(--teal-300);">Case study · Data engineering &amp; BI</div>
+    <h1>Olist E-Commerce Data Mart &amp; Analytics Web App</h1>
+    <p class="lead">From 9 raw CSV files to a star-schema data mart in BigQuery, served to a Power BI dashboard and a FastAPI + React analytics app.</p>
+    <div class="cs-tools"><span>BigQuery</span><span>SQL</span><span>Power BI</span><span>DAX</span><span>Python</span><span>FastAPI</span><span>React</span><span>Docker</span></div>
+    <div class="cs-actions">
+      <a class="btn btn-primary" href="../assets/pdf/case-study-olist-data-mart-analytics-app.pdf" target="_blank" rel="noopener"><svg class="icon"><use href="../assets/img/icons.svg#file"/></svg> Case study PDF</a>
+      <a class="btn btn-ghost" href="https://github.com/agungbudiwirawan/olist-analytics-backend" target="_blank" rel="noopener"><svg class="icon"><use href="../assets/img/icons.svg#github"/></svg> Backend code</a><a class="btn btn-ghost" href="https://github.com/agungbudiwirawan/olist-analytics-frontend" target="_blank" rel="noopener"><svg class="icon"><use href="../assets/img/icons.svg#github"/></svg> Frontend code</a>
+    </div>
+  </div>
+</section>
+<div class="container">
+  <div class="cs-stats reveal"><div class="stat"><div class="stat-num">99,441</div><div class="stat-label">orders, Sep 2016 – Oct 2018</div></div><div class="stat"><div class="stat-num">R$15.4M</div><div class="stat-label">GMV incl. freight</div></div><div class="stat"><div class="stat-num">+141%</div><div class="stat-label">revenue, Jan–Aug 2018 vs 2017</div></div><div class="stat"><div class="stat-num">97%</div><div class="stat-label">customers buy only once</div></div></div>
+  <div class="cs-body">
+    <article class="cs-content reveal">
+
+<h2>The problem</h2>
+<p>Olist's marketplace data is spread across 9 tables (orders, items, payments, reviews, customers, sellers, products, geolocation, category translation). Answering simple questions like "which states are late?" means re-joining everything each time.</p>
+<h2>What I built</h2>
+<ul>
+<li><b>Star-schema data mart in BigQuery:</b> <code>fact_order_items</code> (grain: one product item in one order) and <code>fact_payments</code>, with <code>dim_customers</code>, <code>dim_products</code>, <code>dim_sellers</code>, and <code>dim_date</code>.</li>
+<li><b>Power BI semantic model</b> with DAX measures and an executive dashboard.</li>
+<li><b>FastAPI backend</b> with a routes → services → repositories structure. One global filter set (date range, year, month, state, category) is passed to BigQuery as <b>query parameters</b>, which keeps it safe from SQL injection.</li>
+<li><b>React + Vite frontend</b> with 4 pages (Overview, Products, Customers, Logistics). Insight text is generated from the data on screen, so it updates with every filter.</li>
+</ul>
+<h2>What the data says</h2>
+<p><b>Sales:</b> November 2017 reached R$988K, +52% vs October (Black Friday). Growth flattens from April 2018 at about R$0.85–0.98M per month.</p>
+<p><b>Categories:</b> 17 of 71 categories make up 80% of revenue.</p>
+<div class="bars"><div class="bar-row"><span>Health &amp; beauty</span><div class="bar-track"><div class="bar-fill" data-w="100.0" style="background:#1F3A5F"></div></div><b>9.5%</b></div><div class="bar-row"><span>Watches &amp; gifts</span><div class="bar-track"><div class="bar-fill" data-w="93.7" style="background:#8FA8C8"></div></div><b>8.9%</b></div><div class="bar-row"><span>Bed, bath &amp; table</span><div class="bar-track"><div class="bar-fill" data-w="82.1" style="background:#8FA8C8"></div></div><b>7.8%</b></div><div class="bar-row"><span>Sports &amp; leisure</span><div class="bar-track"><div class="bar-fill" data-w="76.8" style="background:#8FA8C8"></div></div><b>7.3%</b></div><div class="bar-row"><span>Computers &amp; acc.</span><div class="bar-track"><div class="bar-fill" data-w="71.6" style="background:#8FA8C8"></div></div><b>6.8%</b></div></div>
+<p><b>Delivery and satisfaction:</b> 6.8% of delivered orders arrive after the promised date, and the late rate varies a lot by state:</p>
+<div class="bars"><div class="bar-row"><span>Maranhão (MA)</span><div class="bar-track"><div class="bar-fill" data-w="100.0" style="background:#E76F51"></div></div><b>17.4%</b></div><div class="bar-row"><span>Ceará (CE)</span><div class="bar-track"><div class="bar-fill" data-w="79.3" style="background:#E76F51"></div></div><b>13.8%</b></div><div class="bar-row"><span>Bahia (BA)</span><div class="bar-track"><div class="bar-fill" data-w="70.1" style="background:#E76F51"></div></div><b>12.2%</b></div><div class="bar-row"><span>São Paulo (SP)</span><div class="bar-track"><div class="bar-fill" data-w="25.9" style="background:#2A9D8F"></div></div><b>4.5%</b></div><div class="bar-row"><span>Paraná (PR)</span><div class="bar-track"><div class="bar-fill" data-w="23.0" style="background:#2A9D8F"></div></div><b>4.0%</b></div></div>
+<div class="callout warn"><b>Late orders get 1–2★ reviews 62% of the time</b>, vs 9% for on-time orders. Average review drops from 4.29★ to 2.27★.</div>
+<h2>Recommendations</h2>
+<ul>
+<li><b>Fix North-East SLAs first:</b> MA, CE, and BA have 2.7–3.9× the late rate of São Paulo.</li>
+<li><b>Win the second order:</b> with 97% one-time buyers, a post-delivery voucher for satisfied customers is the cheapest growth lever.</li>
+<li><b>Plan for November peaks</b> in stock and logistics capacity.</li>
+</ul>
+<h2>Next iteration</h2>
+<ul><li>Deploy the app publicly with cached queries.</li><li>Add data-quality tests on the mart (row counts, nulls, key integrity).</li></ul>
+
+      <h2>Slides</h2>
+      <p>The full case study as a slide deck. <a href="../assets/pdf/case-study-olist-data-mart-analytics-app.pdf" target="_blank" rel="noopener" style="color:var(--teal);font-weight:600;">Open or download the PDF</a>.</p>
+      <object class="pdf-frame" data="../assets/pdf/case-study-olist-data-mart-analytics-app.pdf#view=FitH" type="application/pdf" aria-label="Case study slides">
+        <p><a href="../assets/pdf/case-study-olist-data-mart-analytics-app.pdf">Download the case study PDF</a>.</p>
+      </object>
+    </article>
+    <aside>
+      <div class="aside-card">
+        <h3>Project details</h3>
+        <dl><div><dt>Role</dt><dd>Solo project: modelling, backend, frontend</dd></div><div><dt>Data</dt><dd>Olist Brazilian E-Commerce (Kaggle), 9 tables</dd></div><div><dt>Stack</dt><dd>BigQuery · Power BI · FastAPI · React · Docker</dd></div></dl>
+        <a class="btn btn-primary btn-sm" href="../assets/pdf/case-study-olist-data-mart-analytics-app.pdf" target="_blank" rel="noopener"><svg class="icon"><use href="../assets/img/icons.svg#download"/></svg> Download PDF</a>
+        <a class="btn btn-outline btn-sm" href="https://github.com/agungbudiwirawan/olist-analytics-backend" target="_blank" rel="noopener"><svg class="icon"><use href="../assets/img/icons.svg#github"/></svg> Backend code</a><a class="btn btn-outline btn-sm" href="https://github.com/agungbudiwirawan/olist-analytics-frontend" target="_blank" rel="noopener"><svg class="icon"><use href="../assets/img/icons.svg#github"/></svg> Frontend code</a>
+      </div>
+    </aside>
+  </div>
+  <nav class="next-proj" aria-label="More case studies">
+    <a href="logistics-dashboard-excel.html"><small>← Previous</small><b>Logistics Performance &amp; Profitability Dashboard</b></a>
+    <a href="advanced-sql-olist.html" style="text-align:right;"><small>Next →</small><b>Advanced SQL E-Commerce Analysis</b></a>
+  </nav>
+</div>
+</main>
+<footer class="footer"><div class="container"><span>© <span id="year">2026</span> Agung Budi Wirawan</span><a href="../index.html">Back to home</a></div></footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
