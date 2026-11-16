@@ -244,6 +244,14 @@ code { font-family: var(--mono); font-size: .88em; background: var(--bg-soft); b
 .edu-card p { color: var(--muted); font-size: 14.5px; }
 .gpa { display: inline-flex; align-items: baseline; gap: 6px; margin-top: 14px; font-weight: 800; color: var(--navy-700); font-size: 24px; }
 .gpa small { font-size: 13px; color: var(--muted); font-weight: 600; }
+.edu-grid > * { min-width: 0; }
+.edu-card > div { min-width: 0; }
+.edu-card.wide { grid-column: 1 / -1; }
+.pub-meta { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin-top: 14px; font-size: 14px; color: var(--muted); }
+.pub-meta a { color: var(--teal); font-weight: 600; display: inline-flex; align-items: center; gap: 6px; overflow-wrap: anywhere; }
+.pub-meta a:hover { text-decoration: underline; }
+.pub-title { font-size: 17px; line-height: 1.4; }
+.pub-title small { display: block; font-size: 14.5px; font-weight: 500; color: var(--muted); margin-top: 6px; line-height: 1.5; }
 .cert-list { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 10px; }
 .cert-list li { display: flex; gap: 10px; align-items: flex-start; font-size: 15px; color: var(--ink-2); }
 .cert-list li .icon { color: var(--teal); margin-top: 3px; }
@@ -376,6 +384,7 @@ pre.code .k { color: var(--teal-300); } pre.code .c { color: #7C8DA6; }
   .project-metrics { grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
   .metric { padding: 10px; } .metric b { font-size: 16px; }
   .contact { padding: 36px 22px; border-radius: 22px; }
+  .edu-card { flex-direction: column; padding: 22px 20px; gap: 14px; }
   .job { grid-template-columns: 1fr; } .job-dot { display: none; } .timeline::before { display: none; }
   .job-card { padding: 22px 20px; }
   .stat { padding: 20px; } .stat-num { font-size: 28px; }
