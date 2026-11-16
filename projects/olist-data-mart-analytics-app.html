@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Olist E-Commerce Data Mart & Analytics Web App | Agung Budi Wirawan</title>
-  <meta name="description" content="From 9 raw CSV files to a star-schema data mart in BigQuery, served to a Power BI dashboard and a FastAPI + React analytics app.">
-  <meta property="og:title" content="Olist E-Commerce Data Mart & Analytics Web App | Agung Budi Wirawan">
-  <meta property="og:description" content="From 9 raw CSV files to a star-schema data mart in BigQuery, served to a Power BI dashboard and a FastAPI + React analytics app.">
+  <title>Olist E-Commerce Data Mart & Power BI Dashboard | Agung Budi Wirawan</title>
+  <meta name="description" content="From 9 raw CSV files to a star-schema data mart in BigQuery and a six-page Power BI dashboard with time intelligence, retention metrics, and insights that update with every filter.">
+  <meta property="og:title" content="Olist E-Commerce Data Mart & Power BI Dashboard | Agung Budi Wirawan">
+  <meta property="og:description" content="From 9 raw CSV files to a star-schema data mart in BigQuery and a six-page Power BI dashboard with time intelligence, retention metrics, and insights that update with every filter.">
   <meta property="og:image" content="https://agungbudiwirawan.github.io/assets/img/thumb-olist-data-mart-analytics-app.webp">
   <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,17 +40,17 @@
   <div class="container">
     <a class="back" href="../index.html#projects"><svg class="icon"><use href="../assets/img/icons.svg#arrow-left"/></svg> All projects</a>
     <div class="kicker" style="color:var(--teal-300);">Case study · Data engineering &amp; BI</div>
-    <h1>Olist E-Commerce Data Mart &amp; Analytics Web App</h1>
-    <p class="lead">From 9 raw CSV files to a star-schema data mart in BigQuery, served to a Power BI dashboard and a FastAPI + React analytics app.</p>
-    <div class="cs-tools"><span>BigQuery</span><span>SQL</span><span>Power BI</span><span>DAX</span><span>Python</span><span>FastAPI</span><span>React</span><span>Docker</span></div>
+    <h1>Olist E-Commerce Data Mart &amp; Power BI Dashboard</h1>
+    <p class="lead">From 9 raw CSV files to a star-schema data mart in BigQuery and a six-page Power BI dashboard with time intelligence, retention metrics, and insights that update with every filter.</p>
+    <div class="cs-tools"><span>BigQuery</span><span>SQL</span><span>Power BI</span><span>DAX</span><span>Power Query</span><span>PBIP</span></div>
     <div class="cs-actions">
       <a class="btn btn-primary" href="../assets/pdf/case-study-olist-data-mart-analytics-app.pdf" target="_blank" rel="noopener"><svg class="icon"><use href="../assets/img/icons.svg#file"/></svg> Case study PDF</a>
-      <a class="btn btn-ghost" href="https://github.com/agungbudiwirawan/olist-analytics-backend" target="_blank" rel="noopener"><svg class="icon"><use href="../assets/img/icons.svg#github"/></svg> Backend code</a><a class="btn btn-ghost" href="https://github.com/agungbudiwirawan/olist-analytics-frontend" target="_blank" rel="noopener"><svg class="icon"><use href="../assets/img/icons.svg#github"/></svg> Frontend code</a>
+      <a class="btn btn-ghost" href="https://github.com/agungbudiwirawan/olist-ecommerce-powerbi-dashboard" target="_blank" rel="noopener"><svg class="icon"><use href="../assets/img/icons.svg#github"/></svg> PBIP files</a>
     </div>
   </div>
 </section>
 <div class="container">
-  <div class="cs-stats reveal"><div class="stat"><div class="stat-num">99,441</div><div class="stat-label">orders, Sep 2016 – Oct 2018</div></div><div class="stat"><div class="stat-num">R$15.4M</div><div class="stat-label">GMV incl. freight</div></div><div class="stat"><div class="stat-num">+141%</div><div class="stat-label">revenue, Jan–Aug 2018 vs 2017</div></div><div class="stat"><div class="stat-num">97%</div><div class="stat-label">customers buy only once</div></div></div>
+  <div class="cs-stats reveal"><div class="stat"><div class="stat-num">99,441</div><div class="stat-label">orders, Sep 2016 – Oct 2018</div></div><div class="stat"><div class="stat-num">6</div><div class="stat-label">dashboard pages</div></div><div class="stat"><div class="stat-num">86</div><div class="stat-label">DAX measures</div></div><div class="stat"><div class="stat-num">93.2%</div><div class="stat-label">orders delivered on time</div></div></div>
   <div class="cs-body">
     <article class="cs-content reveal">
 
@@ -58,11 +58,31 @@
 <p>Olist's marketplace data is spread across 9 tables (orders, items, payments, reviews, customers, sellers, products, geolocation, category translation). Answering simple questions like "which states are late?" means re-joining everything each time.</p>
 <h2>What I built</h2>
 <ul>
-<li><b>Star-schema data mart in BigQuery:</b> <code>fact_order_items</code> (grain: one product item in one order) and <code>fact_payments</code>, with <code>dim_customers</code>, <code>dim_products</code>, <code>dim_sellers</code>, and <code>dim_date</code>.</li>
-<li><b>Power BI semantic model</b> with DAX measures and an executive dashboard.</li>
-<li><b>FastAPI backend</b> with a routes → services → repositories structure. One global filter set (date range, year, month, state, category) is passed to BigQuery as <b>query parameters</b>, which keeps it safe from SQL injection.</li>
-<li><b>React + Vite frontend</b> with 4 pages (Overview, Products, Customers, Logistics). Insight text is generated from the data on screen, so it updates with every filter.</li>
+<li><b>Star-schema data mart in BigQuery:</b> <code>fact_order_items</code> (grain: one product item in one order) and <code>fact_order_payments</code>, with <code>dim_customers</code>, <code>dim_products</code>, <code>dim_sellers</code>, and <code>dim_date</code>.</li>
+<li><b>Six-page Power BI dashboard:</b> Overview, Sales &amp; Product, Customers, Sellers, Delivery, and Payments, each with year, month, and state filters.</li>
+<li><b>86 DAX measures</b> organised in display folders: time intelligence (YoY, MoM, YTD, 3-month moving average), customer retention (new vs returning, repeat rate), delivery performance, and payments.</li>
+<li><b>Text insights written in DAX</b> under the KPI cards, which rewrite themselves for the current filter selection.</li>
+<li><b>Saved as a Power BI Project (.pbip)</b>, so the report and model are plain text files that can be reviewed and versioned in Git.</li>
 </ul>
+<img class="shot" src="../assets/img/olist-pbi/demo.gif" alt="Animated walkthrough of the six Power BI dashboard pages" loading="lazy" width="900" height="503">
+<h2>Dashboard pages</h2>
+<div class="gallery">
+<figure><a href="../assets/img/olist-pbi/01-overview.webp" target="_blank" rel="noopener"><img src="../assets/img/olist-pbi/01-overview.webp" alt="Executive overview page" loading="lazy"></a><figcaption>Overview: KPIs vs previous year, monthly sales, top categories, sales map</figcaption></figure>
+<figure><a href="../assets/img/olist-pbi/02-sales-product.webp" target="_blank" rel="noopener"><img src="../assets/img/olist-pbi/02-sales-product.webp" alt="Sales and product page" loading="lazy"></a><figcaption>Sales &amp; Product: sales vs previous year, weekday pattern, category performance</figcaption></figure>
+<figure><a href="../assets/img/olist-pbi/03-customers.webp" target="_blank" rel="noopener"><img src="../assets/img/olist-pbi/03-customers.webp" alt="Customers page" loading="lazy"></a><figcaption>Customers: new vs returning, customers by state, top cities</figcaption></figure>
+<figure><a href="../assets/img/olist-pbi/04-sellers.webp" target="_blank" rel="noopener"><img src="../assets/img/olist-pbi/04-sellers.webp" alt="Sellers page" loading="lazy"></a><figcaption>Sellers: leaderboard, seller locations, time to hand orders to the carrier</figcaption></figure>
+<figure><a href="../assets/img/olist-pbi/05-delivery.webp" target="_blank" rel="noopener"><img src="../assets/img/olist-pbi/05-delivery.webp" alt="Delivery page" loading="lazy"></a><figcaption>Delivery: on-time rate, delivery time, late deliveries by state</figcaption></figure>
+<figure><a href="../assets/img/olist-pbi/06-payments.webp" target="_blank" rel="noopener"><img src="../assets/img/olist-pbi/06-payments.webp" alt="Payments page" loading="lazy"></a><figcaption>Payments: payment mix, instalments, payment value over time</figcaption></figure>
+</div>
+<h2>Sample DAX</h2>
+<pre class="code"><span class="c">-- Time intelligence</span>
+Sales YoY % =
+    <span class="k">VAR</span> py = [Sales PY]
+    <span class="k">RETURN</span> <span class="k">IF</span> ( <span class="k">NOT ISBLANK</span> ( py ), <span class="k">DIVIDE</span> ( [Total Sales] - py, py ) )
+
+<span class="c">-- Delivery performance</span>
+Late Delivery % = <span class="k">DIVIDE</span> ( [Late Orders], [Delivered Orders] )
+On-Time Delivery % = <span class="k">IF</span> ( [Delivered Orders] &gt; 0, 1 - [Late Delivery %] )</pre>
 <h2>What the data says</h2>
 <p><b>Sales:</b> November 2017 reached R$988K, +52% vs October (Black Friday). Growth flattens from April 2018 at about R$0.85–0.98M per month.</p>
 <p><b>Categories:</b> 17 of 71 categories make up 80% of revenue.</p>
@@ -77,20 +97,31 @@
 <li><b>Plan for November peaks</b> in stock and logistics capacity.</li>
 </ul>
 <h2>Next iteration</h2>
-<ul><li>Deploy the app publicly with cached queries.</li><li>Add data-quality tests on the mart (row counts, nulls, key integrity).</li></ul>
+<ul><li>Publish the dashboard to Power BI Service with scheduled refresh from BigQuery.</li><li>Add data-quality tests on the mart (row counts, nulls, key integrity).</li></ul>
 
       <h2>Slides</h2>
       <p>The full case study as a slide deck. <a href="../assets/pdf/case-study-olist-data-mart-analytics-app.pdf" target="_blank" rel="noopener" style="color:var(--teal);font-weight:600;">Open or download the PDF</a>.</p>
       <object class="pdf-frame" data="../assets/pdf/case-study-olist-data-mart-analytics-app.pdf#view=FitH" type="application/pdf" aria-label="Case study slides">
         <p><a href="../assets/pdf/case-study-olist-data-mart-analytics-app.pdf">Download the case study PDF</a>.</p>
       </object>
+
+<section class="wip">
+<h2>Analytics web app <span class="status">In progress</span></h2>
+<p>I'm also building a custom web app on top of the same data mart. It runs locally today; a public demo link will follow.</p>
+<ul>
+<li><b>FastAPI backend</b> with a routes → services → repositories structure. One global filter set (date range, year, month, state, category) is passed to BigQuery as <b>query parameters</b>, which keeps it safe from SQL injection. Dockerised.</li>
+<li><b>React + Vite frontend</b> with 4 pages (Overview, Products, Customers, Logistics) and insight text generated from the data on screen.</li>
+</ul>
+<p><a href="https://github.com/agungbudiwirawan/olist-analytics-backend" target="_blank" rel="noopener" style="color:var(--teal);font-weight:600;">Backend code</a> · <a href="https://github.com/agungbudiwirawan/olist-analytics-frontend" target="_blank" rel="noopener" style="color:var(--teal);font-weight:600;">Frontend code</a></p>
+</section>
+
     </article>
     <aside>
       <div class="aside-card">
         <h3>Project details</h3>
-        <dl><div><dt>Role</dt><dd>Solo project: modelling, backend, frontend</dd></div><div><dt>Data</dt><dd>Olist Brazilian E-Commerce (Kaggle), 9 tables</dd></div><div><dt>Stack</dt><dd>BigQuery · Power BI · FastAPI · React · Docker</dd></div></dl>
+        <dl><div><dt>Role</dt><dd>Solo project: data modelling and dashboard</dd></div><div><dt>Data</dt><dd>Olist Brazilian E-Commerce (Kaggle), 9 tables</dd></div><div><dt>Stack</dt><dd>BigQuery · Power BI · DAX · Power Query</dd></div><div><dt>Format</dt><dd>Power BI Project (.pbip), version-controlled on GitHub</dd></div></dl>
         <a class="btn btn-primary btn-sm" href="../assets/pdf/case-study-olist-data-mart-analytics-app.pdf" target="_blank" rel="noopener"><svg class="icon"><use href="../assets/img/icons.svg#download"/></svg> Download PDF</a>
-        <a class="btn btn-outline btn-sm" href="https://github.com/agungbudiwirawan/olist-analytics-backend" target="_blank" rel="noopener"><svg class="icon"><use href="../assets/img/icons.svg#github"/></svg> Backend code</a><a class="btn btn-outline btn-sm" href="https://github.com/agungbudiwirawan/olist-analytics-frontend" target="_blank" rel="noopener"><svg class="icon"><use href="../assets/img/icons.svg#github"/></svg> Frontend code</a>
+        <a class="btn btn-outline btn-sm" href="https://github.com/agungbudiwirawan/olist-ecommerce-powerbi-dashboard" target="_blank" rel="noopener"><svg class="icon"><use href="../assets/img/icons.svg#github"/></svg> PBIP files</a>
       </div>
     </aside>
   </div>
