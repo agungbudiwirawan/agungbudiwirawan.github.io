@@ -11,7 +11,7 @@
   <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -29,8 +29,8 @@
       </ul>
     </nav>
     <div class="nav-cta">
-      <a class="btn btn-primary btn-sm" href="../assets/pdf/Agung-Budi-Wirawan-CV.pdf" target="_blank" rel="noopener"><svg class="icon"><use href="../assets/img/icons.svg#download"/></svg> Resume</a>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" data-open="../assets/img/icons.svg#menu" data-close="../assets/img/icons.svg#close"><svg class="icon"><use href="../assets/img/icons.svg#menu"/></svg></button>
+      <a class="btn btn-primary btn-sm" href="../assets/pdf/Agung-Budi-Wirawan-CV.pdf" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#download"/></svg> Resume</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" data-open="../assets/img/icons.svg#menu" data-close="../assets/img/icons.svg#close"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#menu"/></svg></button>
     </div>
   </div>
 </header>
@@ -38,14 +38,14 @@
 <main>
 <section class="cs-hero">
   <div class="container">
-    <a class="back" href="../index.html#projects"><svg class="icon"><use href="../assets/img/icons.svg#arrow-left"/></svg> All projects</a>
-    <div class="kicker" style="color:var(--teal-300);">Case study · SQL analysis</div>
+    <a class="back" href="../index.html#projects"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#arrow-left"/></svg> All projects</a>
+    <div class="kicker">Case study · SQL analysis</div>
     <h1>Advanced SQL E-Commerce Analysis</h1>
     <p class="lead">Four business questions answered on 99K Olist orders with CTEs and window functions, including a seller score I rebuilt after testing it.</p>
     <div class="cs-tools"><span>SQL Server</span><span>CTE</span><span>LAG</span><span>RANK</span><span>NTILE</span><span>PERCENT_RANK</span><span>DATEDIFF</span></div>
     <div class="cs-actions">
-      <a class="btn btn-primary" href="../assets/pdf/case-study-advanced-sql-olist.pdf" target="_blank" rel="noopener"><svg class="icon"><use href="../assets/img/icons.svg#file"/></svg> Case study PDF</a>
-      <a class="btn btn-ghost" href="https://github.com/agungbudiwirawan/advanced-sql-ecommerce-olist" target="_blank" rel="noopener"><svg class="icon"><use href="../assets/img/icons.svg#github"/></svg> SQL code</a>
+      <a class="btn btn-primary" href="../assets/pdf/case-study-advanced-sql-olist.pdf" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#file"/></svg> Case study PDF</a>
+      <a class="btn btn-ghost" href="https://github.com/agungbudiwirawan/advanced-sql-ecommerce-olist" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#github"/></svg> SQL code</a>
     </div>
   </div>
 </section>
@@ -82,13 +82,13 @@
 <div class="table-wrap"><table class="cs-table"><tr><th class="">Tier (rfm_total)</th><th class="r">Customers</th><th class="r">% customers</th><th class="r">% revenue</th></tr><tr class="hl"><td class="">High value (3–6)</td><td class="r">16,527</td><td class="r">17.3%</td><td class="r">33.1%</td></tr><tr class=""><td class="">Mid (7–10)</td><td class="r">51,017</td><td class="r">53.5%</td><td class="r">54.1%</td></tr><tr class=""><td class="">Low (11–15)</td><td class="r">27,876</td><td class="r">29.2%</td><td class="r">12.8%</td></tr></table></div>
 <p>Caveat: only 3.0% of customers order more than once, so the frequency score mostly splits ties. Recency and monetary value carry the real signal.</p>
 <h2>4 · Delivery performance</h2>
-<div class="bars"><div class="bar-row"><span>Fast (≤ 7 days)</span><div class="bar-track"><div class="bar-fill" data-w="92.6" style="background:#2A9D8F"></div></div><b>34.9%</b></div><div class="bar-row"><span>Medium (8–14 days)</span><div class="bar-track"><div class="bar-fill" data-w="100.0" style="background:#8FA8C8"></div></div><b>37.7%</b></div><div class="bar-row"><span>Slow (&gt; 14 days)</span><div class="bar-track"><div class="bar-fill" data-w="72.4" style="background:#E76F51"></div></div><b>27.3%</b></div></div>
+<div class="bars"><div class="bar-row"><span>Fast (≤ 7 days)</span><div class="bar-track"><div class="bar-fill good" data-w="92.6"></div></div><b>34.9%</b></div><div class="bar-row"><span>Medium (8–14 days)</span><div class="bar-track"><div class="bar-fill" data-w="100.0"></div></div><b>37.7%</b></div><div class="bar-row"><span>Slow (&gt; 14 days)</span><div class="bar-track"><div class="bar-fill bad" data-w="72.4"></div></div><b>27.3%</b></div></div>
 <div class="callout warn"><b>Late orders hurt reviews:</b> 6.8% of orders arrive after the promised date, and they average 2.27★ vs 4.29★ for on-time orders.</div>
 <h2>What I learned</h2>
 <ul><li>Normalise metrics before combining them into one score.</li><li>Validate a composite metric against its parts before trusting it.</li></ul>
 
       <h2>Slides</h2>
-      <p>The full case study as a slide deck. <a href="../assets/pdf/case-study-advanced-sql-olist.pdf" target="_blank" rel="noopener" style="color:var(--teal);font-weight:600;">Open or download the PDF</a>.</p>
+      <p>The full case study as a slide deck. <a href="../assets/pdf/case-study-advanced-sql-olist.pdf" target="_blank" rel="noopener" class="text-link">Open or download the PDF</a>.</p>
       <object class="pdf-frame" data="../assets/pdf/case-study-advanced-sql-olist.pdf#view=FitH" type="application/pdf" aria-label="Case study slides">
         <p><a href="../assets/pdf/case-study-advanced-sql-olist.pdf">Download the case study PDF</a>.</p>
       </object>
@@ -98,8 +98,8 @@
       <div class="aside-card">
         <h3>Project details</h3>
         <dl><div><dt>Role</dt><dd>Solo analysis</dd></div><div><dt>Data</dt><dd>Olist Brazilian E-Commerce (Kaggle)</dd></div><div><dt>Engine</dt><dd>Microsoft SQL Server</dd></div></dl>
-        <a class="btn btn-primary btn-sm" href="../assets/pdf/case-study-advanced-sql-olist.pdf" target="_blank" rel="noopener"><svg class="icon"><use href="../assets/img/icons.svg#download"/></svg> Download PDF</a>
-        <a class="btn btn-outline btn-sm" href="https://github.com/agungbudiwirawan/advanced-sql-ecommerce-olist" target="_blank" rel="noopener"><svg class="icon"><use href="../assets/img/icons.svg#github"/></svg> SQL code</a>
+        <a class="btn btn-primary btn-sm" href="../assets/pdf/case-study-advanced-sql-olist.pdf" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#download"/></svg> Download PDF</a>
+        <a class="btn btn-outline btn-sm" href="https://github.com/agungbudiwirawan/advanced-sql-ecommerce-olist" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#github"/></svg> SQL code</a>
       </div>
     </aside>
   </div>

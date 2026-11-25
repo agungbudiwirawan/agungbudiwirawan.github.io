@@ -14,8 +14,13 @@
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="theme-color" content="#17181A">
+  <script>
+    /* Play the hero chart intro once per browser session. */
+    try { if (!sessionStorage.getItem("chartSeen")) { document.documentElement.classList.add("chart-intro"); sessionStorage.setItem("chartSeen", "1"); } } catch (e) {}
+  </script>
 </head>
 <body>
 
@@ -39,10 +44,10 @@
     </nav>
     <div class="nav-cta">
       <a class="btn btn-primary btn-sm" href="assets/pdf/Agung-Budi-Wirawan-CV.pdf" target="_blank" rel="noopener">
-        <svg class="icon"><use href="assets/img/icons.svg#download"/></svg> Resume
+        <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#download"/></svg> Resume
       </a>
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" data-open="assets/img/icons.svg#menu" data-close="assets/img/icons.svg#close">
-        <svg class="icon"><use href="assets/img/icons.svg#menu"/></svg>
+        <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#menu"/></svg>
       </button>
     </div>
   </div>
@@ -53,28 +58,36 @@
 <section class="hero">
   <div class="container hero-grid">
     <div>
-      <span class="eyebrow"><span class="dot"></span>Open to Data Analyst &amp; BI roles</span>
+      <span class="eyebrow">Open to Data Analyst &amp; BI roles</span>
       <h1>Turning raw data into <span class="accent">reports people trust</span> and decisions that stick.</h1>
       <p class="hero-lead">I'm a Data Analyst with 3+ years in data reporting and analytics across multifinance and e-commerce. I build automated reporting pipelines, financial reconciliations, and BI dashboards with SQL, Power Query, Python, and Power BI.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#projects">View case studies <svg class="icon"><use href="assets/img/icons.svg#arrow-right"/></svg></a>
-        <a class="btn btn-ghost" href="assets/pdf/Agung-Budi-Wirawan-CV.pdf" target="_blank" rel="noopener"><svg class="icon"><use href="assets/img/icons.svg#download"/></svg> Download CV</a>
+        <a class="btn btn-primary" href="#projects">View case studies</a>
+        <a class="btn btn-ghost" href="assets/pdf/Agung-Budi-Wirawan-CV.pdf" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#download"/></svg> Download CV</a>
       </div>
       <div class="hero-meta">
-        <span><svg class="icon"><use href="assets/img/icons.svg#map-pin"/></svg> Tangerang Selatan, Indonesia</span>
-        <a href="https://www.linkedin.com/in/agungbudiwirawan" target="_blank" rel="noopener"><svg class="icon"><use href="assets/img/icons.svg#linkedin"/></svg> LinkedIn</a>
-        <a href="https://github.com/agungbudiwirawan" target="_blank" rel="noopener"><svg class="icon"><use href="assets/img/icons.svg#github"/></svg> GitHub</a>
-        <a href="mailto:agungbudiwirawan13@gmail.com"><svg class="icon"><use href="assets/img/icons.svg#mail"/></svg> Email</a>
+        <span><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#map-pin"/></svg> Tangerang Selatan, Indonesia</span>
+        <a href="https://www.linkedin.com/in/agungbudiwirawan" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#linkedin"/></svg> LinkedIn</a>
+        <a href="https://github.com/agungbudiwirawan" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#github"/></svg> GitHub</a>
+        <a href="mailto:agungbudiwirawan13@gmail.com"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#mail"/></svg> Email</a>
       </div>
     </div>
     <div class="portrait">
       <div class="portrait-frame">
         <img src="assets/img/profile.webp" alt="Portrait of Agung Budi Wirawan" width="900" height="900" fetchpriority="high">
       </div>
-      <div class="float-card one"><span class="fc-icon"><svg class="icon"><use href="assets/img/icons.svg#database"/></svg></span><span><b>200K+</b>rows processed / month</span></div>
-      <div class="float-card two"><span class="fc-icon"><svg class="icon"><use href="assets/img/icons.svg#zap"/></svg></span><span><b>~60%</b>less manual prep</span></div>
+      <p class="portrait-note"><b>200K+</b> rows processed / month</p>
+      <p class="portrait-note"><b>~60%</b> less manual prep</p>
     </div>
   </div>
+  <div class="hero-chart" aria-hidden="true">
+    <svg viewBox="0 44 876 396" focusable="false">
+      <g class="bars"><g class="bar" style="--i:0"><path d="M20 420V327.6H54V420Z" fill-opacity=".55"/><path d="M54 420V327.6l14 -9V411Z" fill-opacity=".3"/><path d="M20 327.6l14 -9h34l-14 9Z"/></g><g class="bar" style="--i:1"><path d="M72 420V310.8H106V420Z" fill-opacity=".55"/><path d="M106 420V310.8l14 -9V411Z" fill-opacity=".3"/><path d="M72 310.8l14 -9h34l-14 9Z"/></g><g class="bar" style="--i:2"><path d="M124 420V289.8H158V420Z" fill-opacity=".55"/><path d="M158 420V289.8l14 -9V411Z" fill-opacity=".3"/><path d="M124 289.8l14 -9h34l-14 9Z"/></g><g class="bar" style="--i:3"><path d="M176 420V298.2H210V420Z" fill-opacity=".55"/><path d="M210 420V298.2l14 -9V411Z" fill-opacity=".3"/><path d="M176 298.2l14 -9h34l-14 9Z"/></g><g class="bar" style="--i:4"><path d="M228 420V268.8H262V420Z" fill-opacity=".55"/><path d="M262 420V268.8l14 -9V411Z" fill-opacity=".3"/><path d="M228 268.8l14 -9h34l-14 9Z"/></g><g class="bar" style="--i:5"><path d="M280 420V247.8H314V420Z" fill-opacity=".55"/><path d="M314 420V247.8l14 -9V411Z" fill-opacity=".3"/><path d="M280 247.8l14 -9h34l-14 9Z"/></g><g class="bar" style="--i:6"><path d="M332 420V256.2H366V420Z" fill-opacity=".55"/><path d="M366 420V256.2l14 -9V411Z" fill-opacity=".3"/><path d="M332 256.2l14 -9h34l-14 9Z"/></g><g class="bar" style="--i:7"><path d="M384 420V222.6H418V420Z" fill-opacity=".55"/><path d="M418 420V222.6l14 -9V411Z" fill-opacity=".3"/><path d="M384 222.6l14 -9h34l-14 9Z"/></g><g class="bar" style="--i:8"><path d="M436 420V201.6H470V420Z" fill-opacity=".55"/><path d="M470 420V201.6l14 -9V411Z" fill-opacity=".3"/><path d="M436 201.6l14 -9h34l-14 9Z"/></g><g class="bar" style="--i:9"><path d="M488 420V214.2H522V420Z" fill-opacity=".55"/><path d="M522 420V214.2l14 -9V411Z" fill-opacity=".3"/><path d="M488 214.2l14 -9h34l-14 9Z"/></g><g class="bar" style="--i:10"><path d="M540 420V176.4H574V420Z" fill-opacity=".55"/><path d="M574 420V176.4l14 -9V411Z" fill-opacity=".3"/><path d="M540 176.4l14 -9h34l-14 9Z"/></g><g class="bar" style="--i:11"><path d="M592 420V142.8H626V420Z" fill-opacity=".55"/><path d="M626 420V142.8l14 -9V411Z" fill-opacity=".3"/><path d="M592 142.8l14 -9h34l-14 9Z"/></g><g class="bar" style="--i:12"><path d="M644 420V163.8H678V420Z" fill-opacity=".55"/><path d="M678 420V163.8l14 -9V411Z" fill-opacity=".3"/><path d="M644 163.8l14 -9h34l-14 9Z"/></g><g class="bar" style="--i:13"><path d="M696 420V117.6H730V420Z" fill-opacity=".55"/><path d="M730 420V117.6l14 -9V411Z" fill-opacity=".3"/><path d="M696 117.6l14 -9h34l-14 9Z"/></g><g class="bar" style="--i:14"><path d="M748 420V84.0H782V420Z" fill-opacity=".55"/><path d="M782 420V84.0l14 -9V411Z" fill-opacity=".3"/><path d="M748 84.0l14 -9h34l-14 9Z"/></g><g class="bar" style="--i:15"><path d="M800 420V100.8H834V420Z" fill-opacity=".55"/><path d="M834 420V100.8l14 -9V411Z" fill-opacity=".3"/><path d="M800 100.8l14 -9h34l-14 9Z"/></g></g>
+      <polyline class="trend" pathLength="1" points="44,309 96,292 148,271 200,280 252,250 304,229 356,238 408,204 460,183 512,196 564,158 616,124 668,145 720,99 772,66 824,82"/>
+      <g class="points"><circle cx="44" cy="309" r="4" style="--i:0"/><circle cx="96" cy="292" r="4" style="--i:1"/><circle cx="148" cy="271" r="4" style="--i:2"/><circle cx="200" cy="280" r="4" style="--i:3"/><circle cx="252" cy="250" r="4" style="--i:4"/><circle cx="304" cy="229" r="4" style="--i:5"/><circle cx="356" cy="238" r="4" style="--i:6"/><circle cx="408" cy="204" r="4" style="--i:7"/><circle cx="460" cy="183" r="4" style="--i:8"/><circle cx="512" cy="196" r="4" style="--i:9"/><circle cx="564" cy="158" r="4" style="--i:10"/><circle cx="616" cy="124" r="4" style="--i:11"/><circle cx="668" cy="145" r="4" style="--i:12"/><circle cx="720" cy="99" r="4" style="--i:13"/><circle cx="772" cy="66" r="4" style="--i:14"/><circle cx="824" cy="82" r="4" style="--i:15"/></g>
+    </svg>
+  </div>
+
 </section>
 
 <!-- ============ STATS ============ -->
@@ -92,7 +105,7 @@
   <div class="container about-grid">
     <div class="reveal">
       <div class="kicker">About me</div>
-      <h2 class="section-title" style="margin-bottom:24px;">Mathematics graduate who likes clean data and clear answers.</h2>
+      <h2 class="section-title spaced">Mathematics graduate who likes clean data and clear answers.</h2>
       <div class="about-text">
         <p>I help Finance and Operations teams stop wrestling with spreadsheets and start trusting their numbers.</p>
         <p>At PT Aroma Prima Livindo I consolidate marketplace transactions from 4 platforms and 6 brands, and reconcile payouts against bank records for monthly closing. Before that, at BFI Finance, I built the SQL Server, Power Query, and Apps Script pipelines behind daily operational dashboards, plus validation tools that catch system input errors before data leaves Operations.</p>
@@ -100,10 +113,10 @@
       </div>
     </div>
     <div class="strengths reveal">
-      <div class="strength"><span class="s-icon"><svg class="icon"><use href="assets/img/icons.svg#zap"/></svg></span><div><h3>Reporting automation</h3><p>Power Query, VBA, and Apps Script pipelines that turn hours of copy-paste into a refresh.</p></div></div>
-      <div class="strength"><span class="s-icon"><svg class="icon"><use href="assets/img/icons.svg#check-shield"/></svg></span><div><h3>Reconciliation &amp; data quality</h3><p>Marketplace payouts vs bank mutations, regex validation, and cross-source checks before numbers reach management.</p></div></div>
-      <div class="strength"><span class="s-icon"><svg class="icon"><use href="assets/img/icons.svg#chart"/></svg></span><div><h3>BI &amp; data modelling</h3><p>Star-schema marts in BigQuery, Power BI semantic models with DAX, and Looker Studio dashboards.</p></div></div>
-      <div class="strength"><span class="s-icon"><svg class="icon"><use href="assets/img/icons.svg#code"/></svg></span><div><h3>SQL &amp; Python analysis</h3><p>Advanced SQL with CTEs and window functions, RFM segmentation, and Python for data cleaning and EDA.</p></div></div>
+      <div class="strength"><div><h3>Reporting automation</h3><p>Power Query, VBA, and Apps Script pipelines that turn hours of copy-paste into a refresh.</p></div></div>
+      <div class="strength"><div><h3>Reconciliation &amp; data quality</h3><p>Marketplace payouts vs bank mutations, regex validation, and cross-source checks before numbers reach management.</p></div></div>
+      <div class="strength"><div><h3>BI &amp; data modelling</h3><p>Star-schema marts in BigQuery, Power BI semantic models with DAX, and Looker Studio dashboards.</p></div></div>
+      <div class="strength"><div><h3>SQL &amp; Python analysis</h3><p>Advanced SQL with CTEs and window functions, RFM segmentation, and Python for data cleaning and EDA.</p></div></div>
     </div>
   </div>
 </section>
@@ -117,7 +130,6 @@
     </div>
     <div class="timeline">
       <article class="job reveal">
-        <div class="job-dot"><svg class="icon"><use href="assets/img/icons.svg#briefcase"/></svg></div>
         <div class="job-card">
           <div class="job-top">
             <div><h3>Data Analyst</h3><div class="job-company">PT Aroma Prima Livindo · Tangerang</div></div>
@@ -133,7 +145,6 @@
         </div>
       </article>
       <article class="job reveal">
-        <div class="job-dot"><svg class="icon"><use href="assets/img/icons.svg#briefcase"/></svg></div>
         <div class="job-card">
           <div class="job-top">
             <div><h3>Admin Data Reporting, Central Operation</h3><div class="job-company">PT BFI Finance Indonesia, Tbk · Tangerang Selatan</div></div>
@@ -169,7 +180,7 @@
 
     <div class="projects">
       <article class="project reveal" data-cat="bi sql">
-        <a class="project-thumb" href="projects/olist-data-mart-analytics-app.html"><img src="assets/img/thumb-olist-data-mart-analytics-app.webp" alt="Olist Power BI executive overview page" loading="lazy"><span class="project-cat">Data engineering &amp; BI</span></a>
+        <a class="project-thumb" href="projects/olist-data-mart-analytics-app.html"><img width="1342" height="748" src="assets/img/thumb-olist-data-mart-analytics-app.webp" alt="Olist Power BI executive overview page" loading="lazy"><span class="project-cat">Data engineering &amp; BI</span></a>
         <div class="project-body">
           <h3>Olist E-Commerce Data Mart &amp; Power BI Dashboard</h3>
           <p>Star-schema data mart in BigQuery from 9 raw tables, feeding a six-page Power BI dashboard with time intelligence, retention metrics, and text insights that update with every filter.</p>
@@ -180,14 +191,14 @@
           </div>
           <div class="tags"><span class="tag">BigQuery</span><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Power Query</span></div>
           <div class="project-actions">
-            <a class="btn btn-primary btn-sm" href="projects/olist-data-mart-analytics-app.html">Read case study <svg class="icon"><use href="assets/img/icons.svg#arrow-right"/></svg></a>
-            <a class="btn btn-outline btn-sm" href="https://github.com/agungbudiwirawan/olist-ecommerce-powerbi-dashboard" target="_blank" rel="noopener"><svg class="icon"><use href="assets/img/icons.svg#github"/></svg> PBIP files</a>
+            <a class="btn btn-primary btn-sm" href="projects/olist-data-mart-analytics-app.html">Read case study</a>
+            <a class="btn btn-outline btn-sm" href="https://github.com/agungbudiwirawan/olist-ecommerce-powerbi-dashboard" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#github"/></svg> PBIP files</a>
           </div>
         </div>
       </article>
 
       <article class="project reveal" data-cat="sql">
-        <a class="project-thumb" href="projects/advanced-sql-olist.html"><img src="assets/img/thumb-advanced-sql-olist.webp" alt="SQL query and monthly growth table from the case study" loading="lazy"><span class="project-cat">SQL analysis</span></a>
+        <a class="project-thumb" href="projects/advanced-sql-olist.html"><img width="1467" height="825" src="assets/img/thumb-advanced-sql-olist.webp" alt="SQL query and monthly growth table from the case study" loading="lazy"><span class="project-cat">SQL analysis</span></a>
         <div class="project-body">
           <h3>Advanced SQL E-Commerce Analysis</h3>
           <p>Four business questions answered with CTEs and window functions, including a seller score I rebuilt after finding the review weight had no effect.</p>
@@ -198,14 +209,14 @@
           </div>
           <div class="tags"><span class="tag">SQL Server</span><span class="tag">LAG / RANK / NTILE</span><span class="tag">RFM</span></div>
           <div class="project-actions">
-            <a class="btn btn-primary btn-sm" href="projects/advanced-sql-olist.html">Read case study <svg class="icon"><use href="assets/img/icons.svg#arrow-right"/></svg></a>
-            <a class="btn btn-outline btn-sm" href="https://github.com/agungbudiwirawan/advanced-sql-ecommerce-olist" target="_blank" rel="noopener"><svg class="icon"><use href="assets/img/icons.svg#github"/></svg> Code</a>
+            <a class="btn btn-primary btn-sm" href="projects/advanced-sql-olist.html">Read case study</a>
+            <a class="btn btn-outline btn-sm" href="https://github.com/agungbudiwirawan/advanced-sql-ecommerce-olist" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#github"/></svg> Code</a>
           </div>
         </div>
       </article>
 
       <article class="project reveal" data-cat="python">
-        <a class="project-thumb" href="projects/customer-retention-ml.html"><img src="assets/img/thumb-customer-retention-ml.webp" alt="RFM segment chart from the case study" loading="lazy"><span class="project-cat">Machine learning</span></a>
+        <a class="project-thumb" href="projects/customer-retention-ml.html"><img width="1467" height="825" src="assets/img/thumb-customer-retention-ml.webp" alt="RFM segment chart from the case study" loading="lazy"><span class="project-cat">Machine learning</span></a>
         <div class="project-body">
           <h3>Customer Retention: RFM Segmentation &amp; Prediction</h3>
           <p>RFM cohorts for 5,000 customers and an XGBoost model, after diagnosing overfitting, class imbalance, and a data-leakage feature.</p>
@@ -216,14 +227,14 @@
           </div>
           <div class="tags"><span class="tag">Python</span><span class="tag">XGBoost</span><span class="tag">SMOTE</span><span class="tag">RFM</span></div>
           <div class="project-actions">
-            <a class="btn btn-primary btn-sm" href="projects/customer-retention-ml.html">Read case study <svg class="icon"><use href="assets/img/icons.svg#arrow-right"/></svg></a>
-            <a class="btn btn-outline btn-sm" href="https://github.com/agungbudiwirawan/ecommerce-customer-segmentation-churn-prediction" target="_blank" rel="noopener"><svg class="icon"><use href="assets/img/icons.svg#github"/></svg> Code</a>
+            <a class="btn btn-primary btn-sm" href="projects/customer-retention-ml.html">Read case study</a>
+            <a class="btn btn-outline btn-sm" href="https://github.com/agungbudiwirawan/ecommerce-customer-segmentation-churn-prediction" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#github"/></svg> Code</a>
           </div>
         </div>
       </article>
 
       <article class="project reveal" data-cat="excel bi">
-        <a class="project-thumb" href="projects/logistics-dashboard-excel.html"><img src="assets/img/thumb-logistics-dashboard-excel.webp" alt="Excel logistics dashboard screenshot" loading="lazy"><span class="project-cat">Excel BI</span></a>
+        <a class="project-thumb" href="projects/logistics-dashboard-excel.html"><img width="1467" height="825" src="assets/img/thumb-logistics-dashboard-excel.webp" alt="Excel logistics dashboard screenshot" loading="lazy"><span class="project-cat">Excel BI</span></a>
         <div class="project-body">
           <h3>Logistics Performance &amp; Profitability Dashboard</h3>
           <p>Interactive Excel dashboard on 2,000 shipments showing how delays, couriers, and service types affect profit.</p>
@@ -234,45 +245,45 @@
           </div>
           <div class="tags"><span class="tag">Excel</span><span class="tag">Pivot Tables</span><span class="tag">GETPIVOTDATA</span><span class="tag">Slicers</span></div>
           <div class="project-actions">
-            <a class="btn btn-primary btn-sm" href="projects/logistics-dashboard-excel.html">Read case study <svg class="icon"><use href="assets/img/icons.svg#arrow-right"/></svg></a>
-            <a class="btn btn-outline btn-sm" href="https://github.com/agungbudiwirawan/Logistics-Performance-Profitability-Dashboard-Excel-" target="_blank" rel="noopener"><svg class="icon"><use href="assets/img/icons.svg#github"/></svg> Files</a>
+            <a class="btn btn-primary btn-sm" href="projects/logistics-dashboard-excel.html">Read case study</a>
+            <a class="btn btn-outline btn-sm" href="https://github.com/agungbudiwirawan/Logistics-Performance-Profitability-Dashboard-Excel-" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#github"/></svg> Files</a>
           </div>
         </div>
       </article>
     </div>
 
     <div class="more reveal">
-      <h3><svg class="icon"><use href="assets/img/icons.svg#layers"/></svg> More projects</h3>
+      <h3>More projects</h3>
       <div class="more-grid">
         <a class="mini featured" href="https://github.com/agungbudiwirawan/Data_Science_in_Telco-Data_Cleansing" target="_blank" rel="noopener">
-          <div class="mini-top"><h4>Telco Data Cleansing</h4><svg class="icon"><use href="assets/img/icons.svg#external"/></svg></div>
+          <div class="mini-top"><h4>Telco Data Cleansing</h4><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#external"/></svg></div>
           <p>Duplicates, missing values (drop vs median), IQR outlier handling, and value standardisation on telco customer data.</p>
-          <span class="lang"><i style="background:#3572A5"></i>Python · Pandas</span>
+          <span class="lang">Python · Pandas</span>
         </a>
         <a class="mini" href="https://github.com/agungbudiwirawan/Image-Classification-Rock-Paper-Sccissor-" target="_blank" rel="noopener">
-          <div class="mini-top"><h4>Rock-Paper-Scissors Image Classifier</h4><svg class="icon"><use href="assets/img/icons.svg#external"/></svg></div>
+          <div class="mini-top"><h4>Rock-Paper-Scissors Image Classifier</h4><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#external"/></svg></div>
           <p>CNN with a learning-rate scheduler and callbacks; 95% training accuracy.</p>
-          <span class="lang"><i style="background:#DA5B0B"></i>Python · TensorFlow</span>
+          <span class="lang">Python · TensorFlow</span>
         </a>
         <a class="mini" href="https://github.com/agungbudiwirawan/e-commerce_analysis_using_sql" target="_blank" rel="noopener">
-          <div class="mini-top"><h4>E-Commerce Analysis with SQL</h4><svg class="icon"><use href="assets/img/icons.svg#external"/></svg></div>
+          <div class="mini-top"><h4>E-Commerce Analysis with SQL</h4><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#external"/></svg></div>
           <p>12 business queries on Olist: best sellers, profit by month and city, low-rated sellers.</p>
-          <span class="lang"><i style="background:#CC2927"></i>SQL Server</span>
+          <span class="lang">SQL Server</span>
         </a>
         <a class="mini" href="https://github.com/agungbudiwirawan/supermarket_sales_dashboard-sales-analysis-using-pivot-table-and-chart" target="_blank" rel="noopener">
-          <div class="mini-top"><h4>Supermarket Sales Dashboard</h4><svg class="icon"><use href="assets/img/icons.svg#external"/></svg></div>
+          <div class="mini-top"><h4>Supermarket Sales Dashboard</h4><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#external"/></svg></div>
           <p>Interactive pivot dashboard: gross income by branch and product line, sales quantity.</p>
-          <span class="lang"><i style="background:#1D6F42"></i>Excel</span>
+          <span class="lang">Excel</span>
         </a>
         <a class="mini" href="https://github.com/agungbudiwirawan/sales-analysis-using-excel-formulas" target="_blank" rel="noopener">
-          <div class="mini-top"><h4>Sales Analysis with Excel Formulas</h4><svg class="icon"><use href="assets/img/icons.svg#external"/></svg></div>
+          <div class="mini-top"><h4>Sales Analysis with Excel Formulas</h4><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#external"/></svg></div>
           <p>Gross income, ratings, discounts, and transaction rankings by branch using formulas only.</p>
-          <span class="lang"><i style="background:#1D6F42"></i>Excel</span>
+          <span class="lang">Excel</span>
         </a>
         <a class="mini" href="https://github.com/agungbudiwirawan/socioeconomic_analysis" target="_blank" rel="noopener">
-          <div class="mini-top"><h4>Chicago Socioeconomic Analysis</h4><svg class="icon"><use href="assets/img/icons.svg#external"/></svg></div>
+          <div class="mini-top"><h4>Chicago Socioeconomic Analysis</h4><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#external"/></svg></div>
           <p>SQL analysis of hardship index and per-capita income across Chicago community areas.</p>
-          <span class="lang"><i style="background:#CC2927"></i>SQL</span>
+          <span class="lang">SQL</span>
         </a>
       </div>
     </div>
@@ -288,52 +299,52 @@
     </div>
     <div class="skills-grid">
       <div class="skill-group reveal">
-        <h3><span class="g-icon"><svg class="icon"><use href="assets/img/icons.svg#database"/></svg></span>Databases &amp; SQL</h3>
+        <h3>Databases &amp; SQL</h3>
         <div class="skill-list">
-          <span class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/microsoftsqlserver/microsoftsqlserver-original.svg" alt="" loading="lazy">SQL Server</span>
-          <span class="skill"><svg><use href="assets/img/icons.svg#bigquery"/></svg>BigQuery</span>
+          <span class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/microsoftsqlserver/microsoftsqlserver-original.svg" alt="" width="18" height="18" loading="lazy">SQL Server</span>
+          <span class="skill"><svg aria-hidden="true"><use href="assets/img/icons.svg#bigquery"/></svg>BigQuery</span>
           <span class="skill">CTEs</span><span class="skill">Window functions</span><span class="skill">Complex joins</span>
         </div>
       </div>
       <div class="skill-group reveal">
-        <h3><span class="g-icon"><svg class="icon"><use href="assets/img/icons.svg#chart"/></svg></span>BI &amp; visualisation</h3>
+        <h3>BI &amp; visualisation</h3>
         <div class="skill-list">
-          <span class="skill"><svg><use href="assets/img/icons.svg#powerbi"/></svg>Power BI</span>
+          <span class="skill"><svg aria-hidden="true"><use href="assets/img/icons.svg#powerbi"/></svg>Power BI</span>
           <span class="skill">DAX</span><span class="skill">Semantic models</span>
-          <span class="skill"><svg><use href="assets/img/icons.svg#looker"/></svg>Looker Studio</span>
+          <span class="skill"><svg aria-hidden="true"><use href="assets/img/icons.svg#looker"/></svg>Looker Studio</span>
         </div>
       </div>
       <div class="skill-group reveal">
-        <h3><span class="g-icon"><svg class="icon"><use href="assets/img/icons.svg#table"/></svg></span>Spreadsheets &amp; automation</h3>
+        <h3>Spreadsheets &amp; automation</h3>
         <div class="skill-list">
-          <span class="skill"><svg><use href="assets/img/icons.svg#excel"/></svg>Excel</span>
+          <span class="skill"><svg aria-hidden="true"><use href="assets/img/icons.svg#excel"/></svg>Excel</span>
           <span class="skill">Power Query</span><span class="skill">VBA</span><span class="skill">Pivot Tables</span>
-          <span class="skill"><svg><use href="assets/img/icons.svg#sheets"/></svg>Google Sheets</span><span class="skill">Apps Script</span>
+          <span class="skill"><svg aria-hidden="true"><use href="assets/img/icons.svg#sheets"/></svg>Google Sheets</span><span class="skill">Apps Script</span>
         </div>
       </div>
       <div class="skill-group reveal">
-        <h3><span class="g-icon"><svg class="icon"><use href="assets/img/icons.svg#code"/></svg></span>Python for data analysis</h3>
+        <h3>Python for data analysis</h3>
         <div class="skill-list">
-          <span class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg" alt="" loading="lazy">Python</span>
-          <span class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/pandas/pandas-original.svg" alt="" loading="lazy">Pandas</span>
-          <span class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/numpy/numpy-original.svg" alt="" loading="lazy">NumPy</span>
+          <span class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg" alt="" width="18" height="18" loading="lazy">Python</span>
+          <span class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/pandas/pandas-original.svg" alt="" width="18" height="18" loading="lazy">Pandas</span>
+          <span class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/numpy/numpy-original.svg" alt="" width="18" height="18" loading="lazy">NumPy</span>
           <span class="skill">Data cleaning</span><span class="skill">EDA</span><span class="skill">Matplotlib / Seaborn</span>
-          <span class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/jupyter/jupyter-original.svg" alt="" loading="lazy">Jupyter</span>
-          <span class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/scikitlearn/scikitlearn-original.svg" alt="" loading="lazy">Scikit-Learn (basics)</span>
+          <span class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/jupyter/jupyter-original.svg" alt="" width="18" height="18" loading="lazy">Jupyter</span>
+          <span class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/scikitlearn/scikitlearn-original.svg" alt="" width="18" height="18" loading="lazy">Scikit-Learn (basics)</span>
         </div>
       </div>
       <div class="skill-group reveal">
-        <h3><span class="g-icon"><svg class="icon"><use href="assets/img/icons.svg#layers"/></svg></span>Data apps &amp; engineering</h3>
+        <h3>Data apps &amp; engineering</h3>
         <div class="skill-list">
-          <span class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/fastapi/fastapi-original.svg" alt="" loading="lazy">FastAPI</span>
-          <span class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/react/react-original.svg" alt="" loading="lazy">React</span>
-          <span class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/docker/docker-original.svg" alt="" loading="lazy">Docker</span>
-          <span class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/git/git-original.svg" alt="" loading="lazy">Git</span>
+          <span class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/fastapi/fastapi-original.svg" alt="" width="18" height="18" loading="lazy">FastAPI</span>
+          <span class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/react/react-original.svg" alt="" width="18" height="18" loading="lazy">React</span>
+          <span class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/docker/docker-original.svg" alt="" width="18" height="18" loading="lazy">Docker</span>
+          <span class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/git/git-original.svg" alt="" width="18" height="18" loading="lazy">Git</span>
           <span class="skill">Star schema</span>
         </div>
       </div>
       <div class="skill-group reveal">
-        <h3><span class="g-icon"><svg class="icon"><use href="assets/img/icons.svg#target"/></svg></span>Analytics methods</h3>
+        <h3>Analytics methods</h3>
         <div class="skill-list">
           <span class="skill">Reconciliation</span><span class="skill">RFM segmentation</span><span class="skill">Cohort analysis</span>
           <span class="skill">YoY / MoM trends</span><span class="skill">Data validation</span>
@@ -351,7 +362,6 @@
     </div>
     <div class="edu-grid">
       <div class="edu-card reveal">
-        <span class="e-icon"><svg class="icon"><use href="assets/img/icons.svg#graduation"/></svg></span>
         <div>
           <h3>Bachelor of Science in Mathematics</h3>
           <div class="sub">Universitas Negeri Yogyakarta · 2016 – 2020</div>
@@ -360,25 +370,23 @@
         </div>
       </div>
       <div class="edu-card reveal">
-        <span class="e-icon"><svg class="icon"><use href="assets/img/icons.svg#award"/></svg></span>
         <div>
           <h3>Certifications</h3>
           <ul class="cert-list">
-            <li><svg class="icon"><use href="assets/img/icons.svg#check-shield"/></svg>IBM Data Analyst using Python</li>
-            <li><svg class="icon"><use href="assets/img/icons.svg#check-shield"/></svg>Machine Learning, Digital Talent Scholarship (Kominfo)</li>
+            <li>IBM Data Analyst using Python</li>
+            <li>Machine Learning, Digital Talent Scholarship (Kominfo)</li>
           </ul>
         </div>
       </div>
       <div class="edu-card wide reveal">
-        <span class="e-icon"><svg class="icon"><use href="assets/img/icons.svg#book"/></svg></span>
         <div>
-          <div class="kicker" style="margin-bottom:8px;">Peer-reviewed publication · First author</div>
+          <div class="kicker">Peer-reviewed publication · First author</div>
           <h3 class="pub-title">Penyelesaian Masalah Transportasi Fuzzy dengan Metode Pendekatan Monalisha pada Distribusi Air PDAM Tirtamarta
             <small>Modelling water distribution at PDAM Tirtamarta Yogyakarta as a fuzzy transportation problem to find the minimum-cost delivery schedule under uncertain supply, demand, and cost.</small>
           </h3>
           <div class="pub-meta">
             <span>Wirawan, A. B., &amp; Karyati · <i>Jurnal Sains Dasar</i>, 10(2), 36–43 · 2021</span>
-            <a href="https://doi.org/10.21831/jsd.v10i2.41805" target="_blank" rel="noopener"><svg class="icon"><use href="assets/img/icons.svg#external"/></svg>doi.org/10.21831/jsd.v10i2.41805</a>
+            <a href="https://doi.org/10.21831/jsd.v10i2.41805" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#external"/></svg>doi.org/10.21831/jsd.v10i2.41805</a>
           </div>
           <div class="tags"><span class="tag">Operations research</span><span class="tag">Fuzzy numbers</span><span class="tag">Transportation problem</span><span class="tag">Cost optimisation</span></div>
         </div>
@@ -388,22 +396,22 @@
 </section>
 
 <!-- ============ CONTACT ============ -->
-<section class="section" id="contact" style="padding-top:24px;">
+<section class="section" id="contact">
   <div class="container">
     <div class="contact reveal">
       <div>
-        <div class="kicker" style="color:var(--teal-300);">Contact</div>
+        <div class="kicker">Contact</div>
         <h2>Let's talk about your data.</h2>
         <p>I'm open to Data Analyst and BI Analyst roles. Happy to walk you through any case study, query, or dashboard in detail.</p>
-        <div class="hero-actions" style="margin-top:26px;">
-          <a class="btn btn-primary" href="mailto:agungbudiwirawan13@gmail.com"><svg class="icon"><use href="assets/img/icons.svg#mail"/></svg> Send an email</a>
-          <a class="btn btn-ghost" href="assets/pdf/Agung-Budi-Wirawan-CV.pdf" target="_blank" rel="noopener"><svg class="icon"><use href="assets/img/icons.svg#download"/></svg> Download CV</a>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="mailto:agungbudiwirawan13@gmail.com"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#mail"/></svg> Send an email</a>
+          <a class="btn btn-ghost" href="assets/pdf/Agung-Budi-Wirawan-CV.pdf" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#download"/></svg> Download CV</a>
         </div>
       </div>
       <div class="contact-links">
-        <a class="contact-link" href="mailto:agungbudiwirawan13@gmail.com"><span class="c-icon"><svg class="icon"><use href="assets/img/icons.svg#mail"/></svg></span><span><small>Email</small><b>agungbudiwirawan13@gmail.com</b></span><svg class="icon go"><use href="assets/img/icons.svg#arrow-right"/></svg></a>
-        <a class="contact-link" href="https://www.linkedin.com/in/agungbudiwirawan" target="_blank" rel="noopener"><span class="c-icon"><svg class="icon"><use href="assets/img/icons.svg#linkedin"/></svg></span><span><small>LinkedIn</small><b>in/agungbudiwirawan</b></span><svg class="icon go"><use href="assets/img/icons.svg#external"/></svg></a>
-        <a class="contact-link" href="https://github.com/agungbudiwirawan" target="_blank" rel="noopener"><span class="c-icon"><svg class="icon"><use href="assets/img/icons.svg#github"/></svg></span><span><small>GitHub</small><b>agungbudiwirawan</b></span><svg class="icon go"><use href="assets/img/icons.svg#external"/></svg></a>
+        <a class="contact-link" href="mailto:agungbudiwirawan13@gmail.com"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#mail"/></svg><span><small>Email</small><b>agungbudiwirawan13@gmail.com</b></span></a>
+        <a class="contact-link" href="https://www.linkedin.com/in/agungbudiwirawan" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#linkedin"/></svg><span><small>LinkedIn</small><b>in/agungbudiwirawan</b></span><svg class="icon go" aria-hidden="true"><use href="assets/img/icons.svg#external"/></svg></a>
+        <a class="contact-link" href="https://github.com/agungbudiwirawan" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#github"/></svg><span><small>GitHub</small><b>agungbudiwirawan</b></span><svg class="icon go" aria-hidden="true"><use href="assets/img/icons.svg#external"/></svg></a>
       </div>
     </div>
   </div>
