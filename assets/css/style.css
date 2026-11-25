@@ -72,8 +72,11 @@ button:disabled { cursor: not-allowed; }
 .brand { display: flex; align-items: center; gap: 12px; font-weight: 600; color: var(--text); }
 .brand-mark {
   width: 38px; height: 38px; border-radius: 8px; display: grid; place-items: center;
-  border: 1px solid var(--line); font-family: var(--serif); font-size: 16px;
+  border: 1px solid var(--line);
 }
+/* Small rising bar chart, echoing the hero chart; the tallest bar takes the accent. */
+.brand-mark svg { width: 20px; height: 20px; fill: var(--text); }
+.brand-mark .peak { fill: var(--accent); }
 .brand-name { font-size: 15px; line-height: 1.15; }
 .brand-name small { display: block; font-weight: 400; font-size: 12.5px; color: var(--text-2); }
 .nav-links { display: flex; align-items: center; gap: 4px; list-style: none; margin: 0; padding: 0; }
